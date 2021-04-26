@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97d32fce-3f5d-4e9c-9bea-fd42a1683a5a" name="Default Changelist" comment="" />
+    <list default="true" id="97d32fce-3f5d-4e9c-9bea-fd42a1683a5a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,9 +39,9 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="110" y="120" width="1060" height="440" key="AVDManager" timestamp="1619250538049">
+    <state x="110" y="120" width="1060" height="440" key="AVDManager" timestamp="1619401330083">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="110" y="120" width="1060" height="440" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1619250538049" />
+    <state x="110" y="120" width="1060" height="440" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1619401330083" />
   </component>
 </project>
