@@ -6,21 +6,20 @@ import { RestaurentInfoCard } from "../components/RestaurentInfoCard_component";
 import styled from "styled-components/native";
 
 const SafeArea = styled(SafeAreaView)`
-  color: purple;
-  padding: 10px;
+  padding: ${(props) => props.theme.space[2]};
   flex: 1;
-  backgroundColor: purple;
-  paddingTop: ${StatusBar.currentHeight}px;
+  backgroundColor: ${(props) => props.theme.colors.bg.primary};
+  ${StatusBar.currentHeight && `marginTop: ${StatusBar.currentHeight}px`};
 `;
 const SearchContainer = styled.View`
   flex: 1;
-  padding: 16px;
-  backgroundColor: white;
+  padding: ${(props) => props.theme.space[3]};
+  backgroundColor: ${(props) => props.theme.colors.bg.primary};
 `;
 const ListContainer = styled.View`
   flex: 16;
-  padding: 16px;
-  backgroundColor: green;
+  padding: ${(props) => props.theme.space[2]};
+  backgroundColor: ${(props) => props.theme.colors.bg.secondary};
 `;
 
 export const RestaurentInfoScreens = () => {
@@ -35,22 +34,3 @@ export const RestaurentInfoScreens = () => {
     </SafeArea>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    alignContent: "center",
-    flex: 1,
-    backgroundColor: "purple",
-    paddingTop: StatusBar.currentHeight,
-  },
-  searchbarContainer: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: "white",
-  },
-  listContainer: {
-    flex: 16,
-    padding: 16,
-    backgroundColor: "green",
-  },
-});

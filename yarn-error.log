@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\sampath\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add styled-components
+  C:\Program Files\nodejs\node.exe C:\Users\sampath\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-native-svg@12.1.0
 
 PATH: 
   C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PostgreSQL\13\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\AdoptOpenJDK\jdk8u192-b12\bin;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Android\android-sdk\tools;C:\Android\android-sdk\platform-tools;C:\Android\android-sdk\tools\bin;C:\Program Files\Git\cmd;C:\Users\sampath\AppData\Local\Microsoft\WindowsApps;C:\Program Files\snap\bin;C:\Program Files\heroku\bin;C:\Users\sampath\AppData\Roaming\npm;C:\Users\sampath\AppData\Local\Programs\Microsoft VS Code\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\sampath\Desktop\Projects\MealsToGo\node_modules\expo-file-system\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\sampath\Desktop\Projects\MealsToGo\node_modules\@babel\generator\node_modules\.bin'
 
 npm manifest: 
   {
@@ -28,7 +28,10 @@ npm manifest:
       "lint": "eslint . --ext .js"
     },
     "dependencies": {
+      "@expo-google-fonts/lato": "^0.1.0",
+      "@expo-google-fonts/oswald": "^0.1.0",
       "expo": "~41.0.1",
+      "expo-font": "~9.1.0",
       "expo-status-bar": "~1.0.4",
       "react": "16.13.1",
       "react-dom": "16.13.1",
@@ -37,9 +40,9 @@ npm manifest:
       "react-native-web": "~0.13.12",
       "styled-components": "^5.2.3"
     },
-      "resolutions": {
-        "styled-components": "^5"
-      },
+    "resolutions": {
+      "styled-components": "^5"
+    },
     "devDependencies": {
       "@babel/core": "^7.9.0",
       "@react-native-community/eslint-config": "^2.0.0",
@@ -1200,6 +1203,16 @@ Lockfile:
       js-yaml "^3.13.1"
       minimatch "^3.0.4"
       strip-json-comments "^3.1.1"
+  
+  "@expo-google-fonts/lato@^0.1.0":
+    version "0.1.0"
+    resolved "https://registry.yarnpkg.com/@expo-google-fonts/lato/-/lato-0.1.0.tgz#c0b62ebb883adf41f3e02bd76959914afc7d5d87"
+    integrity sha512-+ooOTs9CPnAHvwe0HjtEHnBZ2MrxzBLqBuXsBIhne20BOuq251MRYzc+2R1cWi/mxyjX+S/buXAES8UvAoTGhw==
+  
+  "@expo-google-fonts/oswald@^0.1.0":
+    version "0.1.0"
+    resolved "https://registry.yarnpkg.com/@expo-google-fonts/oswald/-/oswald-0.1.0.tgz#844358ed0016b59f4722ab3816c2bd2e8103a6f5"
+    integrity sha512-nJfY/CbWkkKOoRmXHUs2slK74KKTzeYyQy0wTK/nfcJE7PENEDm8ZluT8iIxlGT7OYks2YOPOm1EBwsjfjbz8w==
   
   "@expo/config-plugins@1.0.28", "@expo/config-plugins@^1.0.18":
     version "1.0.28"
@@ -6665,7 +6678,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
     integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
   
-  styled-components@^5.2.3:
+  styled-components@^5, styled-components@^5.2.3:
     version "5.2.3"
     resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-5.2.3.tgz#752669fd694aac10de814d96efc287dde0d11385"
     integrity sha512-BlR+KrLW3NL1yhvEB+9Nu9Dt51CuOnHoxd+Hj+rYPdtyR8X11uIW9rvhpy3Dk4dXXBsiW1u5U78f00Lf/afGoA==
