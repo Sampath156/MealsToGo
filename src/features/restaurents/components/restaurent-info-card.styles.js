@@ -4,7 +4,11 @@ import { Card } from "react-native-paper";
 export const Info = styled.View`
   padding: ${(props) => props.theme.space[3]};
 `;
-
+export const Icon = styled.Image`
+  width: 15px;
+  height: 15px;
+  paddingLeft: ${(props) => props.theme.space[2]};
+`;
 export const Section = styled.View`
   flex-direction: row;
   align-items: center;

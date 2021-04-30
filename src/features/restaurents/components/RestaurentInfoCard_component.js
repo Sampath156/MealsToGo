@@ -3,11 +3,11 @@ import { SvgXml } from "react-native-svg";
 
 import star from "../../../../assets/star";
 import open from "../../../../assets/restaurentOpen";
-//import { Spacer } from "../../../components/spacer/spacer.component";
 import { Spacer } from "../../../components/spacer/spacer-temp";
 import { Text } from "../../../components/typography/text.component";
 import {
   Info,
+  Icon,
   Section,
   Address,
   SectionEnd,
@@ -20,7 +20,7 @@ import {
 export const RestaurentInfoCard = ({ restaurent = {} }) => {
   const {
     restaurantname = "Some Restaurent",
-    icon,
+    icon="https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
     photos = [
       "https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg",
     ],
@@ -31,7 +31,7 @@ export const RestaurentInfoCard = ({ restaurent = {} }) => {
   } = restaurent;
 
   const ratingArray = Array.from(new Array(Math.floor(rating)));
-  console.log(restaurent);
+  
   return (
     <RestaurentCard elevation={5}>
       <RestaurentCardCover key={restaurantname} source={{ uri: photos[0] }} />
@@ -50,6 +50,9 @@ export const RestaurentInfoCard = ({ restaurent = {} }) => {
             <Spacer position="left" size="large">
               {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
             </Spacer>
+            
+              <Icon source={{ uri: icon }} />
+            
           </SectionEnd>
         </Section>
         <Address>{address}</Address>
