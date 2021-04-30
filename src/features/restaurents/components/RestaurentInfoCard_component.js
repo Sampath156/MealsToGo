@@ -19,28 +19,28 @@ import {
 
 export const RestaurentInfoCard = ({ restaurent = {} }) => {
   const {
-    restaurentname = "Some Restaurent",
+    restaurantname = "Some Restaurent",
     icon,
-    image = [
+    photos = [
       "https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg",
     ],
     address = "10 Downing Street, London",
     isOpenNow = true,
     isTemporarlyClosed = false,
-    rating = "4",
+    rating = 3,
   } = restaurent;
 
   const ratingArray = Array.from(new Array(Math.floor(rating)));
-
+  console.log(restaurent);
   return (
     <RestaurentCard elevation={5}>
-      <RestaurentCardCover key={restaurentname} source={{ uri: image[0] }} />
+      <RestaurentCardCover key={restaurantname} source={{ uri: photos[0] }} />
       <Info>
-        <Text variant="label">{restaurentname}</Text>
+        <Text variant="label">{restaurantname}</Text>
         <Section>
-          <Rating>
-            {ratingArray.map((index) => (
-              <SvgXml xml={star} width="20" height="20" />
+         <Rating>
+            {ratingArray.map(() => (
+              <SvgXml xml={star} width={20} height={20} />
             ))}
           </Rating>
           <SectionEnd>
@@ -48,7 +48,7 @@ export const RestaurentInfoCard = ({ restaurent = {} }) => {
               <Text variant="error"> TEMPORARLY CLOSED </Text>
             )}
             <Spacer position="left" size="large">
-            {isOpenNow && <SvgXml xml={open} width="20" height="20" />}
+              {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
             </Spacer>
           </SectionEnd>
         </Section>

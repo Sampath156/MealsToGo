@@ -13,7 +13,7 @@ import { useFonts as Lato, Lato_400Regular } from "@expo-google-fonts/lato";
 import { RestaurentInfoScreens } from "./src/features/restaurents/screens/RestaurentInfoScreens";
 import { theme } from "./src/infrastructure/theme/index";
 import { SafeArea } from "./src/components/utils/safe-area.component";
-import { color } from "react-native-reanimated";
+import {RestaurantContextProvider} from "./src/services/restaurants/restaurants.context";
 
 const Tab = createBottomTabNavigator();
 const TAB_ICON = {
@@ -58,6 +58,7 @@ export default function App() {
     <>
       <NavigationContainer>
         <ThemeProvider theme={theme}>
+          <RestaurantContextProvider>
           <Tab.Navigator
             screenOptions={ScreenOptions}
             tabBarOptions={{
@@ -69,6 +70,7 @@ export default function App() {
             <Tab.Screen name="Map" component={Maps} />
             <Tab.Screen name="Settings" component={Settings} />
           </Tab.Navigator>
+          </RestaurantContextProvider>
         </ThemeProvider>
       </NavigationContainer>
     </>

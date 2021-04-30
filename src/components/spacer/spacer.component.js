@@ -19,7 +19,7 @@ const getVariant = (position, size, theme) => {
   const property = positionVariant[position];
   const value = theme.space[sizeIndex];
   const temp = property + ":" + value;
-  console.log(temp.toString());
+  //console.log(temp.toString());
   return temp.toString();
 };
 
@@ -30,7 +30,7 @@ const SpacerView = styled.View`
 export const Spacer = ({ position, size, children }) => {
   const theme = useTheme();
   const variant = getVariant(position, size, theme);
-  console.log(variant);
+  //console.log(variant);
   return <SpacerView variant={variant}>{children}</SpacerView>;
 };
 
