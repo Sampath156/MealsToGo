@@ -12,11 +12,14 @@ export const LocationContextProvider = ({ children }) => {
   const onSearch = (searchKeyword) => {
     setKeyword(searchKeyword);
     setIsLoading(true);
-    if (!searchKeyword.length) {
-      //dont do anything
+    //console.log(keyword);
+  };
+  useEffect(() => {
+    if (!keyword.length) {
+      //dont do
       return;
     }
-    locationRequest(searchKeyword.toLowerCase())
+    locationRequest(keyword.toLowerCase())
       .then(locationTransform)
       .then((result) => {
         setIsLoading(false);
@@ -26,7 +29,7 @@ export const LocationContextProvider = ({ children }) => {
         setIsLoading(false);
         setError(err);
       });
-  };
+  },[keyword]);
 
   return (
     <LocationContext.Provider
