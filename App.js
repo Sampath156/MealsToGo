@@ -1,4 +1,5 @@
 import React from "react";
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { ThemeProvider } from "styled-components/native";
@@ -37,6 +38,7 @@ export default function App() {
           </LocationContextProvider>
         </ThemeProvider>
       </NavigationContainer>
+      <ExpoStatusBar style="auto" />
     </>
   );
 }
