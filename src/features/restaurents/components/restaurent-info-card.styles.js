@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Card } from "react-native-paper";
 
 export const Info = styled.View`
-  padding: ${(props) => props.theme.space[3]};
+  padding: ${(props) => props.theme.space[2]};
 `;
 export const Icon = styled.Image`
   width: 15px;
@@ -20,8 +20,8 @@ export const Address = styled.Text`
 `;
 export const SectionEnd = styled.Text`
   paddingLeft: ${(props) => props.theme.space[2]};
-  flex: 1;
-  flex-direction: row;
+  flex: 0.8;
+  flex-direction: row-reverse;
   justify-content: flex-end;
 `;
 export const Rating = styled.Text`
