@@ -8,8 +8,8 @@ import { FavouritesContext } from "../../services/favourites/FavouritesContext";
 
 const FavouriteButton = styled(TouchableOpacity)`
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 22px;
+  right: 22px;
   z-index: 9;
 `;
 
@@ -28,7 +28,7 @@ export const Favourite = ({ restaurant }) => {
     >
       <AntDesign
         name={isFavourite ? "heart" : "hearto"}
-        size={22}
+        size={20}
         color={isFavourite ? "red" : "white"}
       />
     </FavouriteButton>

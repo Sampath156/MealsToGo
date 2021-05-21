@@ -10,19 +10,19 @@ const CompactImage = styled.Image`
 `;
 
 const CompactWebview = styled(WebView)`
-  height: 120px;
-  width: 120px;
+  height: 80px;
+  width: 80px;
 `;
 
 const Item = styled.View`
   max-width: 120px;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
 `;
 
-export const CompactRestaurantInfo = ({ restaurant }) => {
+export const CompactRestaurantInfo = ({ restaurant, isMap }) => {
   const isAndroid = Platform.OS === "android";
-  const ResImage = isAndroid ? CompactWebview : CompactImage;
+  const ResImage = isMap && isAndroid ? CompactWebview : CompactImage;
   return (
     <Item>
       <ResImage source={{ uri: restaurant.photos[0] }} />
