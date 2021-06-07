@@ -10,10 +10,9 @@ import { useFonts as Lato, Lato_400Regular } from "@expo-google-fonts/lato";
 import firebase from "firebase/app";
 
 import { theme } from "./src/infrastructure/theme/index";
-import { RestaurantContextProvider } from "./src/services/restaurants/restaurants.context";
-import { LocationContextProvider } from "./src/services/location/location.context";
+
 import { NavigationIndex } from "./src/infrastructure/navigation/navigationIndex";
-import { FavouritesContextProvider } from "./src/services/favourites/FavouritesContext";
+
 import { AuthenticationContextProvider } from "./src/services/authentication/authentication.context";
 
 const firebaseConfig = {
@@ -22,7 +21,7 @@ const firebaseConfig = {
   projectId: "meals2go-ad317",
   storageBucket: "meals2go-ad317.appspot.com",
   messagingSenderId: "496119238742",
-  appId: "1:496119238742:web:eb3626ce4e3d4a59bf6bf7"
+  appId: "1:496119238742:web:eb3626ce4e3d4a59bf6bf7",
 };
 
 if (!firebase.apps.length) {
@@ -45,19 +44,12 @@ export default function App() {
 
   return (
     <>
-      
-        <ThemeProvider theme={theme}>
-          <AuthenticationContextProvider>
-          <FavouritesContextProvider>
-          <LocationContextProvider>
-            <RestaurantContextProvider>
-              <NavigationIndex />
-            </RestaurantContextProvider>
-          </LocationContextProvider>
-          </FavouritesContextProvider>
-          </AuthenticationContextProvider>
-        </ThemeProvider>
-      
+      <ThemeProvider theme={theme}>
+        <AuthenticationContextProvider>
+          <NavigationIndex />
+        </AuthenticationContextProvider>
+      </ThemeProvider>
+
       <ExpoStatusBar style="auto" />
     </>
   );

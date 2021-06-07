@@ -1,6 +1,7 @@
 import styled from "styled-components/native";
 import { colors } from "../../../infrastructure/theme/colors";
 import { Button, TextInput } from "react-native-paper";
+import { View } from "react-native";
 
 export const Background = styled.ImageBackground.attrs({
   source: require("../../../../assets/home_bg.jpg"),
@@ -35,4 +36,12 @@ export const Title = styled.Text`
 
 export const AuthTextInput = styled(TextInput)`
   width: 300px;
+`;
+
+export const AnimationWrapper = styled.View`
+  position: absolute;
+  width: 80%;
+  height: 40%;
+  top: 30px;
+  padding: ${(props) => props.theme.space[2]};
 `;

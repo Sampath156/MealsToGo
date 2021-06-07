@@ -6,11 +6,12 @@ import styled from "styled-components/native";
 import { RestaurentInfoCard } from "../components/RestaurentInfoCard_component";
 import { RestaurantContext } from "../../../services/restaurants/restaurants.context";
 import { FavouritesContext } from "../../../services/favourites/FavouritesContext";
-import {RestaurantDetail} from "./RestaurantDetail";
+import { RestaurantDetail } from "./RestaurantDetail";
 import { Spacer } from "../../../components/spacer/spacer-temp";
 import { SafeArea } from "../../../components/utils/safe-area.component";
 import { Search } from "../components/search.component";
 import { FavouritesBar } from "../../../components/favourites/favouritesbar.component";
+import { FadeInView } from "../../../components/animations/FadeIn.component";
 
 const Loading = styled(ActivityIndicator)`
   margin-left: -25px;
@@ -24,7 +25,7 @@ const LoadingContainer = styled.View`
 export const RestaurentInfoScreens = ({ navigation }) => {
   const { isLoading, error, restaurants } = useContext(RestaurantContext);
   const { favourites } = useContext(FavouritesContext);
-  const [isToggled, setIsToggled ] = useState(false);
+  const [isToggled, setIsToggled] = useState(false);
   return (
     <SafeArea>
       {isLoading && (
@@ -53,9 +54,11 @@ export const RestaurentInfoScreens = ({ navigation }) => {
                 })
               }
             >
-            <Spacer position="bottom" size="large">
-              <RestaurentInfoCard restaurent={item} />
-            </Spacer>
+              <Spacer position="bottom" size="large">
+                <FadeInView>
+                  <RestaurentInfoCard restaurent={item} />
+                </FadeInView>
+              </Spacer>
             </TouchableOpacity>
           );
         }}
